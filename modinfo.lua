@@ -1,7 +1,7 @@
 name = "Better Clothes"
 description = "Clothes do not need repair!"
 author = "NightKosh"
-version = "4.1.0"
+version = "4.1.4"
 
 forumthread = ""
 

@@ -1,7 +1,7 @@
 
 local BCHelper = {}
 
-function BCHelper:generic_onunequip(inst)
+BCHelper.generic_onunequip = function(inst)
     if GetModConfigData("closes_need_repair", KnownModIndex:GetModActualName("Better Clothes")) and not inst.components.fueled:IsEmpty() then
         inst.components.equippable.walkspeedmult = 1
         inst.components.equippable.dapperness = 0
@@ -15,13 +15,13 @@ function BCHelper:generic_onunequip(inst)
     end
 end
 
-function BCHelper:generic_onunequip_perished(inst)
+BCHelper.generic_onunequip_perished = function(inst)
     if not GetModConfigData("perished_closes", KnownModIndex:GetModActualName("Better Clothes")) then
         BCHelper.generic_onunequip(inst)
     end
 end
 
-function BCHelper:stop_fuel_consuming(inst)
+BCHelper.stop_fuel_consuming = function(inst)
     if GetModConfigData("closes_need_repair", KnownModIndex:GetModActualName("Better Clothes")) then
         inst.components.fueled:StopConsuming()
     end
