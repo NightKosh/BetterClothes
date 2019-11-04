@@ -49,7 +49,7 @@ local function AddWoodlegsHat(inst)
 end
 
 local function AddWathgrithrHat(inst)
-    if GLOBAL.IsDLCEnabled(GLOBAL.CAPY_DLC) then
+    if GLOBAL.IsDLCEnabled(GLOBAL.CAPY_DLC) or GLOBAL.IsDLCEnabled(GLOBAL.PORKLAND_DLC) then
         Recipe("wathgrithrhat", { Ingredient("goldnugget", 2), Ingredient("rocks", 2) }, RECIPETABS.WAR, TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.COMMON)
     else
         Recipe("wathgrithrhat", { Ingredient("goldnugget", 2), Ingredient("rocks", 2) }, RECIPETABS.WAR, { SCIENCE = 2, MAGIC = 0, ANCIENT = 0 }, nil, nil, nil, nil, true)
@@ -57,7 +57,7 @@ local function AddWathgrithrHat(inst)
 end
 
 local function AddAllHats(inst)
-    if GLOBAL.IsDLCEnabled(GLOBAL.CAPY_DLC) then
+    if GLOBAL.IsDLCEnabled(GLOBAL.CAPY_DLC) or GLOBAL.IsDLCEnabled(GLOBAL.PORKLAND_DLC) then
         AddWoodlegsHat(inst)
     end
     AddWathgrithrHat(inst)
